@@ -13,6 +13,12 @@ export const TodoWrapper = () => {
       }])
       console.log(todos)
     }
+
+    const toggleComplete = id => {
+      setTodos(todos.map(todo => todo.id === id ? {...
+        todo, completed: !todo.completed} : todo
+      ))
+    }
   return (
     <div className='ToDoWrapper'>
       <h1>Get Things Done!</h1>
